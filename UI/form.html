@@ -1,0 +1,83 @@
+<html>
+<head>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .form {
+            margin-top: 5em;
+            width: 30%;
+            border: 2px black solid;
+            border-radius: 9px;
+            padding: 20px;
+            background-color: rgb(133, 177, 177);
+        }
+
+        fieldset {
+            margin: 1em;
+            color: black;
+            border-radius: 5px black solid;
+            background-color: rgb(165, 161, 161);
+        }
+
+        #button {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        button {
+            width: 6rem;
+            height: 2em;
+            border-radius: 7px;
+            background-color: black;
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form class="form">
+            <div>
+                <h2><u>Passport Status Form</u></h2>
+                <br>
+            </div>
+            <fieldset id="field1">
+                <legend>Have Passport?</legend>
+                    
+                <label for="maybe"><input type="radio" name="group" >
+                    Yes</label>
+                <label for="no"><input type="radio" name="group">
+                    No</label>
+            </fieldset>
+            <fieldset id="group1">
+                <legend>Gender :</legend>
+                <input type="radio" value="value1" name="group1">
+                <label for="txt">Male</label>
+                <input type="radio" value="value2" name="group1">
+                <label for="txt">Female</label>
+                <input type="radio" value="value2" name="group1">
+                <label for="txt">Other</label>
+            </fieldset>
+
+            <fieldset id="group2">
+                <legend>Nationality : </legend>
+                <input type="radio" value="value1" name="group1">
+                <label for="txt">Indian :</label>
+                <input type="radio" value="value2" name="group1">
+                <label for="txt">Foreigner :</label>
+            </fieldset>
+            <div id="button">
+                <button>Submit</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
