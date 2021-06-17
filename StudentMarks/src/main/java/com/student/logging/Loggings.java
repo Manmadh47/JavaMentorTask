@@ -17,7 +17,7 @@ public class Loggings {
 	public boolean logErrors(String[] fileData, int lineNo) throws FieldNotFoundException {
 
 		List<String> list = Arrays.asList(fileData);
-
+		this.missingFields = false;
 		try {
 			PropertyConfigurator.configure("./src/log4j.properties");
 
@@ -34,7 +34,7 @@ public class Loggings {
 			LOGGER.error("", e);
 			}
 		} catch (FieldNotFoundException ex) {
-			if (LOGGER.isDebugEnabled())  //The goal of such ìlogging guardsî is not to prevent log messages from being written.
+			if (LOGGER.isDebugEnabled())  //The goal of such ‚Äúlogging guards‚Äù is not to prevent log messages from being written.
 			{
 			errorMessage="Field is missing at line no."+lineNo;
 			LOGGER.error(errorMessage,ex);
